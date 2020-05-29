@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
     icone: {
       allowNull: false,
       type: DataTypes.STRING
+    },
+    status: {
+      allowNull: false,
+      type: DataTypes.BOOLEAN
     }
   //Proibe o sequelize de colocar o nome da tabela no plural
   }, { freezeTableName: true });

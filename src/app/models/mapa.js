@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
     img: {
       allowNull: false,
       type: DataTypes.STRING,
+    },
+    status: {
+      allowNull: false,
+      type: DataTypes.BOOLEAN
     }
   }, { freezeTableName: true })
 
