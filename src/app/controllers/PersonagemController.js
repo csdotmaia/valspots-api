@@ -1,14 +1,10 @@
-const { habilidade, personagem } = require('../models')
+const { personagem } = require('../models')
 
-class HabilidadeController {
+class PersonagemController {
 
   async index(req, res) {
     try{
-      const data = await habilidade.findAll({
-        include: [
-          {model: personagem}
-        ]
-      })
+      const data = await personagem.findAll()
       return res.json(data)
     }catch(err){
       return res.status(400).json(err)
@@ -21,7 +17,7 @@ class HabilidadeController {
       const {dataCreate} = req.body
       console.log(dataCreate)
 
-      const data = await habilidade.create(dataCreate)
+      const data = await personagem.create(dataCreate)
       
       return res.json(data)
     } catch (err) {
@@ -31,4 +27,4 @@ class HabilidadeController {
 
 }
 
-module.exports = new HabilidadeController()
+module.exports = new PersonagemController()
