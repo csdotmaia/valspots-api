@@ -1,10 +1,10 @@
-const { personagem } = require('../models')
+const { mapa } = require('../models')
 
-class PersonagemController {
+class MapaController {
 
   async index(req, res) {
     try{
-      const data = await personagem.findAll()
+      const data = await mapa.findAll()
       return res.json(data)
     }catch(err){
       return res.status(400).json(err)
@@ -15,7 +15,7 @@ class PersonagemController {
     try {
       const {dataCreate} = req.body
 
-      const data = await personagem.create(dataCreate)
+      const data = await mapa.create(dataCreate)
       
       return res.json(data)
     } catch (err) {
@@ -25,4 +25,4 @@ class PersonagemController {
 
 }
 
-module.exports = new PersonagemController()
+module.exports = new MapaController()
