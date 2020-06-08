@@ -3,6 +3,19 @@ const { personagem } = require('../models')
 
 class HabilidadeController {
 
+  async getAll(req, res){
+    try {
+      const data = await habilidade.findAll({
+        include: [
+          {model: personagem}
+        ]
+      })
+      return res.json(data)
+    } catch (err) {
+      return res.status(400).json(err)
+    }
+  }
+
   async index(req, res) {
     try{
       const data = await habilidade.findAll({
