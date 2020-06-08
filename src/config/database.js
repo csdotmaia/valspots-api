@@ -4,7 +4,7 @@ module.exports = {
     host: 'localhost',
     //port:3306,
     username: 'app',
-    password: 'cavalomanco123',
+    password: 'QWE!@#QWEbighorse0420',
     database: 'valspots',
     operatorAliases: false,
     define: {
