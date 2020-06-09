@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express()
 
 var corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'http://104.248.13.101:3000',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 app.use(cors(corsOptions))
