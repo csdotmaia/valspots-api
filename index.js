@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express()
 
 var corsOptions = {
-  origin: 'http://localhost',
+  origin: 'http://localhost:3000',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 app.use(cors(corsOptions))
@@ -14,7 +14,7 @@ app.use(express.json())
 
 app.use(routes)
 
-app.get('/testt', function (req, res, next) {
+app.get('/testt', cors({origin: '*'}) ,function (req, res, next) {
   res.json({msg: 'This is CORS-enabled for only asd.'})
 })
 
