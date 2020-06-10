@@ -6,16 +6,15 @@ const app = express()
 
 var corsOptions = {
   origin: 'http://104.248.13.101:3000',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
-app.use(cors(corsOptions))
+app.use(cors())
 // Definição do bodyParser para a API aceitar requisições JSON
 app.use(express.json())
 
 app.use(routes)
 
 app.get('/testt', cors({origin: '*'}) ,function (req, res, next) {
-  res.json({msg: 'This is CORS-enabled for only asd.'})
+  res.json({msg: 'asd cors.'})
 })
 
 const server = app.listen(3001, () => {
