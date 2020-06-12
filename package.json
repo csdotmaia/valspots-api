@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
     "eslint-plugin-react-hooks": "0.0.0-33c3af284",
     "express": "^4.17.1",

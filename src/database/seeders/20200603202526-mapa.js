@@ -5,28 +5,28 @@ module.exports = {
       return queryInterface.bulkInsert('mapa', [
         {
           nome: 'Split',
-          img: 'split2.png',
+          img: 'split.png',
           status: true,
           created_at: new Date(),
           updated_at: new Date(),
         },
         {
           nome: 'Haven',
-          img: 'haven2.png',
+          img: 'haven.png',
           status: true,
           created_at: new Date(),
           updated_at: new Date(),
         },
         {
           nome: 'Bind',
-          img: 'bind2.png',
+          img: 'bind.png',
           status: true,
           created_at: new Date(),
           updated_at: new Date(),
         },
         {
           nome: 'Ascent',
-          img: 'ascent2.jpeg',
+          img: 'ascent.jpeg',
           status: true,
           created_at: new Date(),
           updated_at: new Date(),
