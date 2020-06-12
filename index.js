@@ -4,9 +4,7 @@ const cors = require('cors')
 
 const app = express()
 
-var corsOptions = {
-  origin: 'http://104.248.13.101:3000',
-}
+
 app.use(cors())
 // Definição do bodyParser para a API aceitar requisições JSON
 app.use(express.json())
