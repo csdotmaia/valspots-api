@@ -17,10 +17,10 @@ function checkIp(req, res, next) {
 
 const routes = Router()
 
-routes.post('/personagem/all', checkIp, PersonagemController.getAll)
-routes.post('/mapa/all', checkIp, MapaController.getAll)
-routes.post('/habilidade/all', checkIp, HabilidadeController.getAll)
-routes.post('/spot/all', checkIp, SpotsController.index)
+routes.get('/personagem/all', PersonagemController.getAll)
+routes.get('/mapa/all', MapaController.getAll)
+routes.get('/habilidade/all', HabilidadeController.getAll)
+routes.get('/spot/all', SpotsController.index)
 
 // routes.post('/habilidade/create', HabilidadeController.create)
 
