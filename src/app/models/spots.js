@@ -10,11 +10,24 @@ module.exports = (sequelize, DataTypes) => {
     nome:{
       allowNull: false,
       type: DataTypes.STRING,
-      unique: true
+    },
+    nome_sub:{
+      allowNull: false,
+      type: DataTypes.STRING,
     },
     video:{
       allowNull: false,
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      unique: true
+    },
+    thumb:{
+      allowNull: false,
+      type: DataTypes.STRING,
+      unique: true
+    },
+    side:{
+      allowNull: false,
+      type: DataTypes.STRING,
     },
     descricao:{
       allowNull: false,
@@ -32,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.STRING,
       unique: true
-    }
+    },
   //Proibe o sequelize de colocar o nome da tabela no plural
   }, { freezeTableName: true });
 

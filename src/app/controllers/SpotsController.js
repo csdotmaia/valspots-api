@@ -5,7 +5,25 @@ const Op = Sequelize.Op
 
 class SpotsController {
 
-  async index(req, res) {
+  // async getAgent(req, res) {
+  //   try {
+  //     const data = await spots.findAll({
+  //       include: [
+  //         {model: mapa},
+  //         {model: personagem,
+  //           include: [
+  //             {model: habilidade}
+  //           ],
+  //           where:
+  //         },
+  //       ]
+  //     })
+  //   } catch (err) {
+  //     return res.status(400).json(err)
+  //   }
+  // }
+  
+  async getAll(req, res) {
     try{
       const data = await spots.findAll({
         include: [
@@ -23,17 +41,18 @@ class SpotsController {
     }
   }
 
-  async getAll(req, res) {
+  async getSpot(req, res) {
     try{
-      const data = await personagem.findAll({
+      const data = await spots.findOne({
+        where:{
+          url: req.params.spot_url
+        },
         include: [
-          {
-            model: habilidade,
-            where: {
-              teclado:{
-                [Sequelize.Op.like]: 'q'
-              }
-            }
+          {model: mapa},
+          {model: personagem,
+            include: [
+              {model: habilidade}
+            ]
           },
         ]
       })
@@ -42,6 +61,27 @@ class SpotsController {
       return res.status(400).json(err)
     }
   }
+
+  
+  // async getAll(req, res) {
+  //   try{
+  //     const data = await personagem.findAll({
+  //       include: [
+  //         {
+  //           model: habilidade,
+  //           where: {
+  //             teclado:{
+  //               [Sequelize.Op.like]: 'q'
+  //             }
+  //           }
+  //         },
+  //       ]
+  //     })
+  //     return res.json(data)
+  //   }catch(err){
+  //     return res.status(400).json(err)
+  //   }
+  // }
 
   async create(req, res) {
     try {

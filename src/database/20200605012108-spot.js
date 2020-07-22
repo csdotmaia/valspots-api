@@ -4,7 +4,10 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('spots', [{
       nome: 'B Long roof shot',
+      nome_sub: 'From long',
       video: 'https://www.youtube.com/watch?v=zsSpoOaJWXE',
+      thumb: 'mid-double-doors-vision-sova-haven',
+      side: 'attacker',
       descricao: 'just jump',
       personagem_id: 6,
       mapa_id: 3,

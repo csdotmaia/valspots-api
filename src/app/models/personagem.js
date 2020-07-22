@@ -16,6 +16,14 @@ module.exports = (sequelize, DataTypes) =>{
       allowNull: false,
       type: DataTypes.STRING
     },
+    text_solo:{
+      allowNull: false,
+      type: DataTypes.STRING
+    },
+    text_duo:{
+      allowNull: false,
+      type: DataTypes.STRING
+    },
     status: {
       allowNull: false,
       type: DataTypes.BOOLEAN

@@ -16,6 +16,29 @@ class PersonagemController {
     }
   }
 
+  async getAgent(req, res) {
+    console.log(req)
+    try {
+      const data = await personagem.findOne({
+        where:{
+          nome: req.params.agent
+        },
+        attributes: [
+          'nome', 'icone', 'text_solo', 'text_duo'
+        ],
+        include:[
+          {
+            model: habilidade, 
+            attributes:['teclado', 'icone']
+          }
+        ]
+      })
+      return res.json(data)
+    } catch (err) {
+      return res.status(400).json(err)
+    }
+  }
+
   async index(req, res) {
     try{
       const data = await personagem.findAll()

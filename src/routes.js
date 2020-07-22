@@ -20,11 +20,15 @@ const routes = Router()
 routes.get('/personagem/all', checkTokenGet, PersonagemController.getAll)
 routes.get('/mapa/all',checkTokenGet, MapaController.getAll)
 routes.get('/habilidade/all',checkTokenGet, HabilidadeController.getAll)
-routes.get('/spot/all',checkTokenGet, SpotsController.index)
+routes.get('/spots/all',checkTokenGet, SpotsController.getAll)
+
+routes.get('/spots/:spot_url',checkTokenGet, SpotsController.getSpot)
+routes.get('/personagem/:agent', checkTokenGet, PersonagemController.getAgent)
+// routes.get('/spots/:name',checkTokenGet, SpotsController.getAll)
 
 // routes.post('/habilidade/create', HabilidadeController.create)
 
-routes.get('/personagem/show', PersonagemController.index)
+// routes.get('/personagem/show', PersonagemController.index)
 // routes.post('/personagem/create', PersonagemController.create)
 // routes.delete('/personagem/delete/:id', PersonagemController.delete)
 
