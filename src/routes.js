@@ -1,5 +1,4 @@
 const {Router} = require('express')
-const bcrypt = require('bcrypt')
 const config = require('./config/secret')
 const HabilidadeController = require('./app/controllers/HabilidadeController')
 const PersonagemController = require('./app/controllers/PersonagemController')
