@@ -17,7 +17,6 @@ class PersonagemController {
   }
 
   async getAgent(req, res) {
-    console.log(req)
     try {
       const data = await personagem.findOne({
         where:{
