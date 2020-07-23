@@ -2,6 +2,22 @@ const { mapa } = require('../models')
 
 class MapaController {
 
+  async getMap(req, res){
+    try {
+      const data = await mapa.findOne({
+        where:{
+          nome: req.params.map
+        },
+        attributes: [
+          'nome'
+        ],
+      })
+      return res.json(data)
+    } catch (err) {
+      return res.status(400).json(err)
+    }
+  }
+
   async getAll(req, res){
     try {
       const data = await mapa.findAll()

@@ -21,8 +21,9 @@ routes.get('/mapa/all',checkTokenGet, MapaController.getAll)
 routes.get('/habilidade/all',checkTokenGet, HabilidadeController.getAll)
 routes.get('/spots/all',checkTokenGet, SpotsController.getAll)
 
-routes.get('/spots/:spot_url',checkTokenGet, SpotsController.getSpot)
 routes.get('/personagem/:agent', checkTokenGet, PersonagemController.getAgent)
+routes.get('/mapa/:map', checkTokenGet, MapaController.getMap)
+routes.get('/spots/:spot_url',checkTokenGet, SpotsController.getSpot)
 // routes.get('/spots/:name',checkTokenGet, SpotsController.getAll)
 
 // routes.post('/habilidade/create', HabilidadeController.create)
