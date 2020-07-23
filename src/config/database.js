@@ -1,6 +1,6 @@
 module.exports = {
   development: {
-    dialect: 'mariadb',
+    dialect: 'mysql',
     host: 'localhost',
     //port:3306,
     username: 'app',
